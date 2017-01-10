@@ -1,0 +1,6 @@
+framework module Iwds {
+  umbrella header "Iwds.h"
+
+  export *
+  module * { export * }
+}
