@@ -26,6 +26,6 @@
 
 - (BOOL)isEnabled;
 
-- (void)saveBleConnectionState;
+- (void)notifyRemoteToDisconnect;
 
 @end

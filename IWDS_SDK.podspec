@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "IwdsSDK"
+  s.name         = "IWDS_SDK"
   s.version      = "1.3.0.0"
   s.summary      = "Iwds sdk for ios."
   s.description  = <<-DESC

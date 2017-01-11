@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol IWDSLoggerDelegate <NSObject>
+
+/**
+ * 应用异常时回调
+ */
+- (void)onApplicationException:(NSNotification *)notification;
+
+@end
+
 @class UIViewController;
 
 /**@brief 打印的log类型*/
@@ -41,6 +50,11 @@ typedef void(^IWDSLoggerPikerEventHandler) (NSArray *logPathList);
 void IWDSExtendNSLog(NSString *format, ...);
 
 @interface IWDSLoggerClient : NSObject
+
+/**
+ * 日志委托
+ */
+@property (nonatomic, weak) id<IWDSLoggerDelegate> delegate;
 
 /**
  *  @brief 唯一初始化方法
