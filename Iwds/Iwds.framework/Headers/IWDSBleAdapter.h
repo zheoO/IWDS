@@ -26,6 +26,11 @@
 
 - (BOOL)isEnabled;
 
+/**
+ * Deprecated
+ */
+- (void)saveBleConnectionState;
+
 - (void)notifyRemoteToDisconnect;
 
 @end
