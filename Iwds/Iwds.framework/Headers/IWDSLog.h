@@ -29,7 +29,7 @@
 #ifdef DEBUG
 
 #define IWDSLog(fmt,...)  NSLog(@"%@", [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
-#define IWDSLogV(fmt,...) if(LOG_DEBUG) NSLog(@"V/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
+#define IWDSLogV(fmt,...) if(LOG_VERBOSE) NSLog(@"V/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogD(fmt,...) if(LOG_DEBUG) NSLog(@"D/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogI(fmt,...) NSLog(@"I/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogW(fmt,...) NSLog(@"W/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
@@ -38,7 +38,7 @@
 #else
 
 #define IWDSLog(fmt,...)  IWDSExtendNSLog([NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
-#define IWDSLogV(fmt,...) if(LOG_DEBUG) IWDSExtendNSLog(@"V/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
+#define IWDSLogV(fmt,...) if(LOG_VERBOSE) IWDSExtendNSLog(@"V/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogD(fmt,...) if(LOG_DEBUG) IWDSExtendNSLog(@"D/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogI(fmt,...) IWDSExtendNSLog(@"I/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);
 #define IWDSLogW(fmt,...) IWDSExtendNSLog(@"W/%@ %@ %@\n", LOG_PREFIX, self, [NSString stringWithFormat:(fmt), ##__VA_ARGS__]);

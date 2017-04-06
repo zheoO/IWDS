@@ -33,4 +33,6 @@
 
 - (void)notifyRemoteToDisconnect;
 
+- (void)setMTU:(NSUInteger)mtu;
+
 @end
